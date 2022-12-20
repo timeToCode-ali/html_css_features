@@ -1,0 +1,190 @@
+/* FONT SOURCE */ 
+
+@font-face {
+  font-family: 'DINPro-LightItalic';
+  src: url(./fonts/DINPro-LightItalic.woff2) format('woff2');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'DINCondensed';
+  src: url(./fonts/DINCondensedRegular.woff2) format('woff2');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DINPro';
+  src: url(./fonts/DINPro.woff2) format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+h2, h3, button {
+  font-family: DINCondensed;
+  margin: 0;
+  color: #0C0B0B;
+}
+
+h2 {
+  font-size: 62px;
+}
+
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-family: DINPro, Open Sans, sans-serif;
+  font-size: 16px;
+  color: #0C0B0B;
+}
+
+body {
+  margin: auto;
+  width: 100%;
+  max-width: 1728px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.cocktails_section {
+  position: relative;
+  padding: 85px;
+}
+
+.cocktails_section h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.cocktails_section .cocktails {
+  display: flex;
+  flex-direction: row;
+  gap: 45px;
+  justify-content: center;
+}
+
+.cocktails_section .cocktails .cocktail_single {
+  width: 25%;
+  height: 600px;
+  background: #F6F6F6;
+  box-shadow: 0px 4px 27px -2px rgba(0, 0, 0, 0.11);
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+
+.cocktails_section .cocktails .cocktail_single .cocktail_image{
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cocktails_section .cocktails .cocktail_single .cocktail_image img{
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.cocktails_section .cocktails .cocktail_single .cocktail_image .photo_info {
+  background-color: rgba(0, 0, 0, 0.54);
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
+  font-family: 'DINPro-LightItalic', sans-serif;
+}
+
+
+
+.cocktails_section .cocktails .cocktail_single .cocktail_content{
+  height: 60% ;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.cocktails_section .cocktails .cocktail_single .cocktail_content p {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 11;
+  -webkit-box-orient:vertical
+   
+}
+
+.cocktails_section .cocktails .cocktail_single .cocktail_content button {
+  width: calc(100% - 20px);
+  border: 1px solid #DDDDDD;
+  background-color: white;
+  height: 40px;
+  text-transform: uppercase;
+  text-align-last: left;
+  padding-left: 16px;
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  cursor: pointer;
+}
+
+.cocktails_section .cocktails .cocktail_single .cocktail_content button:hover { 
+  background-color: #333;
+  color: white;
+  transition: all 500ms ease-in-out;
+  border: none;
+}
+
+.cocktails_section .cocktails .cocktail_single:hover {
+  transform: scale3d(1.1, 1.1, 1.1);
+  box-shadow: 0px 4px 27px -2px rgba(0, 0, 0, 0.17);
+}
+
+@media screen and (max-width: 1350px) {
+  .cocktails_section .cocktails {
+    gap: 15;
+  }
+
+  .cocktails_section .cocktails .cocktail_single {
+    box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.17);
+  }
+  
+}
+
+
+@media screen and (max-width: 1024px) {
+ .cocktails_section {
+  padding: 30px;
+ }
+ .cocktails_section .cocktails {
+  gap: 50px;
+  flex-wrap: wrap;
+ }
+ .cocktails_section .cocktails .cocktail_single {
+  width: calc(50% - 50px)
+ }
+}
+
+@media screen and (max-width: 550px) {
+  .cocktails_section {
+    padding: 20px;
+   }
+   .cocktails_section .cocktails {
+    gap: 50px;
+   }
+   .cocktails_section .cocktails .cocktail_single {
+    width: 100%
+   }
+}
